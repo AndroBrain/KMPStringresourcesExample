@@ -1,7 +1,9 @@
 package resources.strings
 
 class EnStringResources : StringResources {
-    override fun provideWelcome() = "Welcome to Example App"
+    override val welcome
+        get() = "Welcome to Example App"
+
     override fun provideHelloUser(name: String) = "Hello $name"
     override fun providePasswordLengthError(length: Int) = when (length) {
         0 -> "Password cannot be empty."
@@ -9,5 +11,6 @@ class EnStringResources : StringResources {
         else -> "Your password has $length characters, it needs to have at least 8 characters."
     }
 
-    override fun provideLogin() = "Login"
+    override val login
+        get() = "Login"
 }

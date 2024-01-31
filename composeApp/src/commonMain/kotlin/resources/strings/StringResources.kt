@@ -1,8 +1,8 @@
 package resources.strings
 
 interface StringResources {
-    fun provideWelcome(): String
+    val welcome: String
     fun provideHelloUser(name: String): String
     fun providePasswordLengthError(length: Int): String
-    fun provideLogin(): String
+    val login: String
 }
